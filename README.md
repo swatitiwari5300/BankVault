@@ -28,4 +28,4 @@ The project uses the following PL/pgSQL features, each organized into dedicated 
 | `functions/`   | Includes reusable logic like the audit logging function |
 | `triggers/`    | Contains triggers that automatically log transactions into an audit table |
 | `cursors/`     | Demonstrates use of explicit cursors to fetch and display data |
-| `exceptions/`  | Covers error-handling scenarios like insufficient balance and runtime errors |
+| `exceptions/`  | Covers error-handling scenarios for runtime errors |
