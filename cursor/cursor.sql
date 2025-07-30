@@ -1,3 +1,21 @@
+/*
+    Procedure: print_txn_history
+
+    Description:
+        Prints the transaction history for a given account ID. The procedure uses a cursor to iterate over
+        all transactions associated with the specified account, ordered by transaction date, and outputs
+        each transaction's ID, type, amount (in INR), and date using RAISE NOTICE.
+
+    Parameters:
+        id (integer) - The account ID for which the transaction history will be printed.
+
+    Usage:
+        CALL print_txn_history(<account_id>);
+
+    Notes:
+        - The procedure assumes the existence of a 'transactions' table with columns: txn_id, txn_type, amount, txn_date, and account_id.
+        - Output is sent to the client as NOTICE messages.
+*/
 create or replace procedure print_txn_history(id integer)
 language plpgsql
 as $$
@@ -26,6 +44,9 @@ begin
 end;
 $$;
 	
+-- Calls the stored procedure `print_txn_history` with the argument `1`.
+-- This procedure is likely used to print or retrieve the transaction history
+-- for the account or entity identified by the ID `1`.
 call print_txn_history(1);
 	
 	
